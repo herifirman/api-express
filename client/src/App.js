@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'
-import Route from 'react-router-dom/Route'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
 import Navbar from './components/Navbar'
 import Landing from './components/Landing'
 import Login from './components/Login'
@@ -13,11 +13,11 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navbar />
-          <Route exact path="/" components={Landing} />
+          <Route exact path="/" component={Landing} />
           <div className="container">
-            <Route exact path="/register" components={Register} />
-            <Route exact path="/login" components={Login} />
-            <Route exact path="/profile" components={Profile} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/profile" component={Profile} />
           </div>
         </div>
       </Router>
